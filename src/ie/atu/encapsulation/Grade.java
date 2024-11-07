@@ -44,21 +44,14 @@ public class Grade {
 
     // Validation methods
     private void validateStudentName(String name) {
-        if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("Student name cannot be empty.");
-        }
     }
 
     private void validateGrade(int grade) {
         if (grade < 0 || grade > 100) {
-            throw new IllegalArgumentException("Grade must be between 0 and 100.");
         }
     }
 
     private void validateCourseCode(String code) {
-        if (code == null || !code.matches("^[A-Za-z]{2}\\d{3}$")) {
-            throw new IllegalArgumentException("Course code must match the pattern (e.g., 'CS101').");
-        }
     }
 
     // Method to get the letter grade

@@ -28,23 +28,14 @@ public class Book {
 
     // Validation methods
     private String validateIsbn(String isbn) {
-        if (isbn == null || !isbn.matches("\\d{10}|\\d{13}")) {
-            throw new IllegalArgumentException("ISBN must be a 10 or 13 digit number.");
-        }
         return isbn;
     }
 
     private String validateTitle(String title) {
-        if (title == null || title.trim().isEmpty()) {
-            throw new IllegalArgumentException("Title cannot be empty.");
-        }
         return title;
     }
 
     private String validateAuthor(String author) {
-        if (author == null || author.trim().isEmpty()) {
-            throw new IllegalArgumentException("Author cannot be empty.");
-        }
         return author;
     }
 }
